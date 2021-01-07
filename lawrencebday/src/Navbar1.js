@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
-
+import LoginModal from './LoginModal';
 function Navbar() {
 	return (
 		<div>
@@ -20,7 +20,7 @@ function Navbar() {
 						</h5>
 						<header className="triage" style={{ marginTop: -15, fontSize: 9 }}>
 							{' '}
-							Coffee Roasters{' '}
+							Coffee Lab{' '}
 						</header>
 					</div>
 					<button
@@ -32,54 +32,55 @@ function Navbar() {
 						<span className="navbar-toggler-icon"></span>
 					</button>
 
-					<ul className="nav-item pl-2"></ul>
+					<ul className="nav-item"></ul>
 
 					<ul className="navbar-nav">
 						<div className="row">
-							<li className="nav-item pl-2">
+							<li className="nav-item d-flex align-items-center">
 								<NavLink
 									whileHover={{ color: 'black' }}
-									to={`beans`}
+									to={`/beans`}
 									className="customlink nav-link mx-4"
 								>
 									Coffee
 								</NavLink>
 							</li>
 
-							<li className="nav-item pl-2">
+							<li className="nav-item d-flex align-items-center">
 								<NavLink
 									whileHover={{ color: 'black' }}
-									to={`merch`}
+									to={`/merch`}
 									className="customlink nav-link mx-4"
 								>
 									Merch
 								</NavLink>
 							</li>
 
-							<li className="nav-item pl-2">
+							<li className="nav-item d-flex align-items-center">
 								<NavLink
 									whileHover={{ color: 'black' }}
-									to={`our`}
+									to={`/our`}
 									className="customlink nav-link mx-4"
 								>
 									Locations
 								</NavLink>
 							</li>
 
-							<li className="nav-item pl-2">
-								<NavLink
+							<li className="nav-item d-flex align-items-center">
+								{/* <NavLink
 									whileHover={{ color: 'black' }}
-									to={`login`}
+									to={`/login`}
 									className="customlink nav-link mx-3 mr-5"
 								>
 									Login
-								</NavLink>
+								</NavLink> */}
+								<LoginModal />
 							</li>
 
-							<li className="nav-item pl-2">
+							<li className="nav-item d-flex align-items-center">
 								<NavLink
 									whileHover={{ color: 'black' }}
-									to={`cart`}
+									to={`/cart`}
 									className="customlink carticon nav-link mx-3 mr-5"
 								></NavLink>
 							</li>

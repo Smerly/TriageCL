@@ -12,7 +12,6 @@ function Footer() {
 					className="img-fluid"
 				/>
 			</div>
-
 			<div
 				className="my-5"
 				style={{
@@ -188,6 +187,7 @@ function Footer() {
 					</div>
 				</div>
 			</div>
+			© Copyright. Ernest Cheung, Lawrence Cheung, Triage
 		</div>
 	);
 }

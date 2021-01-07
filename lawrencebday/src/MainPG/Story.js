@@ -6,7 +6,15 @@ import Founder from '../images/Founder.jpeg';
 function Story() {
 	return (
 		<div>
-			<div className="column text-center mt-5">
+			<div
+				className="column text-center mt-5"
+				// style={{
+				// 	display: 'flex',
+				// 	flexDirection: 'column',
+				// 	justifyContent: 'center',
+				// 	alignItems: 'center',
+				// }}
+			>
 				<h1 className="titlecustom" style={{ fontSize: 64 }}>
 					{' '}
 					Our Story
@@ -31,7 +39,7 @@ function Story() {
 					<img
 						src={Founder}
 						alt="Founder"
-						className="mt-5"
+						className="mt-5 img-fluid"
 						style={{
 							width: '25%',
 							border: '1px black solid',
