@@ -2,6 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import TriageLogoWhite from './images/Triage-Logo-White.png';
+import { NavLink } from 'react-router-dom';
+
 function Footer() {
 	return (
 		<div className="testo">
@@ -102,32 +104,32 @@ function Footer() {
 						}}
 					></div>
 					<div className="my-4">
-						<a
-							href="#"
+						<NavLink
+							to={`/location`}
 							className="customlink2"
 							style={{ textDecoration: 'none' }}
 						>
 							{' '}
 							<p>Alameda</p>
-						</a>
+						</NavLink>
 
-						<a
-							href="#"
+						<NavLink
+							to={`/location`}
 							className="customlink2"
 							style={{ textDecoration: 'none' }}
 						>
 							{' '}
 							<p>San Francisco</p>
-						</a>
+						</NavLink>
 
-						<a
-							href="#"
+						<NavLink
+							to={`/location`}
 							className="customlink2"
 							style={{ textDecoration: 'none' }}
 						>
 							{' '}
 							<p>San Jose</p>
-						</a>
+						</NavLink>
 					</div>
 				</div>
 

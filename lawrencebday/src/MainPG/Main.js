@@ -14,7 +14,7 @@ function Main() {
 	return (
 		<div>
 			<Navbar1 />
-			<Hero />
+			{/* <Hero /> */}
 			<FSM />
 			<Story />
 			<Separation />

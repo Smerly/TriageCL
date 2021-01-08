@@ -57,7 +57,7 @@ function Navbar2() {
 								<li className="nav-item pr-5 col-sm d-flex align-items-center">
 									<NavLink
 										whileHover={{ color: 'black' }}
-										to={`/our`}
+										to={`/location`}
 										className="customlink nav-link mx-4"
 									>
 										Locations

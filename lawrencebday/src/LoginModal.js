@@ -19,13 +19,27 @@ class LoginModal extends Component {
 			<div className="nav-link">
 				<button
 					href="#"
-					className="buttoncustom2 titlecustom nav-link mx-3 mr-5"
-					style={{ borderRadius: 100 }}
+					className="nav-link mx-3 mr-5"
+					style={{
+						borderRadius: 100,
+						fontSize: '1vw',
+						backgroundColor: '#E3A7FF',
+						color: 'white',
+						width: 150,
+						height: 60,
+					}}
 					onClick={() => {
 						this.handleModal();
 					}}
 				>
-					Login
+					<p
+						className="triage titlecustom2"
+						style={{
+							fontSize: '2vw',
+						}}
+					>
+						Login
+					</p>
 				</button>
 				<Modal show={this.state.show} onHide={() => this.handleModal()}>
 					<Modal.Header

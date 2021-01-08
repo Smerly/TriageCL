@@ -3,7 +3,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink } from 'react-router-dom';
 import LoginModal from './LoginModal';
-function Navbar() {
+
+// import CartNav from './CartNav';
+
+function Navbar1() {
 	return (
 		<div>
 			<section>
@@ -59,7 +62,7 @@ function Navbar() {
 							<li className="nav-item d-flex align-items-center">
 								<NavLink
 									whileHover={{ color: 'black' }}
-									to={`/our`}
+									to={`/location`}
 									className="customlink nav-link mx-4"
 								>
 									Locations
@@ -81,8 +84,10 @@ function Navbar() {
 								<NavLink
 									whileHover={{ color: 'black' }}
 									to={`/cart`}
-									className="customlink carticon nav-link mx-3 mr-5"
-								></NavLink>
+									className="customlink nav-link mx-4"
+								>
+									Cart{}
+								</NavLink>
 							</li>
 						</div>
 					</ul>
@@ -92,4 +97,4 @@ function Navbar() {
 	);
 }
 
-export default Navbar;
+export default Navbar1;

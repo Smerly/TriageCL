@@ -145,3 +145,9 @@ button {
 	min-width: 300px;
 	border: 1px black solid;
 }
+
+.customlist {
+	font-size: 2vw;
+	text-decoration: none;
+	list-style-type: none;
+}
