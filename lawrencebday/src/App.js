@@ -7,20 +7,24 @@ import MerchMain from './Merch/mainMerch';
 import mainCoffee from './Coffee/mainCoffee';
 import Footer from './Footer';
 import Location from './Location/Location';
-import CartNav from './CartNav';
-import { useState } from 'react';
+// import CartNav from './CartNav';
+import Cart from './CartExtras/Cart';
+import DataProvider from './CartExtras/Context';
+
 function App() {
 	return (
-		<div className="App">
-			<Router>
-				<Route exact path="/" component={Main} />
-				<Route path="/merch" component={MerchMain} />
-				<Route path="/beans" component={mainCoffee} />
-				<Route path="/location" component={Location} />
-				<Route path="/cart" component={CartNav} />
-				<Footer />
-			</Router>
-		</div>
+		<DataProvider>
+			<div className="App">
+				<Router>
+					<Route exact path="/" component={Main} />
+					<Route path="/merch" component={MerchMain} />
+					<Route path="/beans" component={mainCoffee} />
+					<Route path="/location" component={Location} />
+					<Route path="/cart" component={Cart} />
+					<Footer />
+				</Router>
+			</div>
+		</DataProvider>
 	);
 }
 

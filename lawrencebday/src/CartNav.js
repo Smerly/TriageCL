@@ -1,91 +1,100 @@
-import { useState } from 'react';
-import { HashRouter as Router, Route } from 'react';
-import Navbar1 from './Navbar1';
-const PAGE_PRODUCTS = 'products';
-const PAGE_CART = 'cart';
+// import { useState } from 'react';
+// import { HashRouter as Router, Route } from 'react';
+// import Navbar1 from './Navbar1';
 
-function CartNav() {
-	const [cart, setCart] = useState([PAGE_CART]);
-	const [page, setPage] = useState(PAGE_PRODUCTS);
-	const [products] = useState([
-		{
-			name: 'Standard T-Shirt',
-			cost: '$29.99',
-			image: '',
-		},
-		{
-			name: 'Inverse Tote Bag',
-			cost: '$19.99',
-			image: '',
-		},
-	]);
+// import React from 'react';
+// const PAGE_PRODUCTS = 'products';
+// const PAGE_CART = 'cart';
 
-	const renderProducts = () => (
-		<>
-			<h1> Products </h1>
-			<div>
-				{products.map((product, idx) => (
-					<div key={idx}>
-						<h3> {product.name} </h3>
-						<h4> {product.cost} </h4>
-						<img src={product.image} alt={product.name} />
-						<button onClick={() => addToCart(product)}> Add to cart </button>
-					</div>
-				))}
-			</div>
-		</>
-	);
+// function CartNav() {
+// 	const [cart, setCart] = useState([PAGE_CART]);
+// 	const [page, setPage] = useState(PAGE_PRODUCTS);
+// 	const [products] = useState([
+// 		{
+// 			name: 'Standard T-Shirt',
+// 			cost: '$29.99',
+// 			image: '',
+// 		},
+// 		{
+// 			name: 'Inverse Tote Bag',
+// 			cost: '$19.99',
+// 			image: '',
+// 		},
+// 	]);
 
-	const addToCart = (product) => {
-		setCart([...cart, { ...product }]);
-	};
+// 	const renderProducts = () => (
+// 		<>
+// 			<h1> Products </h1>
+// 			<div>
+// 				{products.map((product, idx) => (
+// 					<div key={idx}>
+// 						<h3> {product.name} </h3>
+// 						<h4> {product.cost} </h4>
+// 						<img src={product.image} alt={product.name} />
+// 						<button onClick={() => addToCart(product)}> Add to cart </button>
+// 					</div>
+// 				))}
+// 			</div>
+// 		</>
+// 	);
 
-	const removeFromCart = (productToRemove) => {
-		setCart(cart.filter((product) => product !== productToRemove));
-	};
-	const navigateTo = (nextPage) => {
-		setPage(nextPage);
-	};
+// 	const addToCart = (product) => {
+// 		setCart([...cart, { ...product }]);
+// 	};
 
-	const renderCart = () => (
-		<>
-			<h1> Cart </h1>
-			<div>
-				{cart.map((product, idx) => (
-					<div key={idx}>
-						<h3> {product.name} </h3>
-						<h4> {product.cost} </h4>
-						<img src={product.image} alt={product.name} />
-						<button onClick={() => removeFromCart(product)}>
-							{' '}
-							RemoveFromCart{' '}
-						</button>
-					</div>
-				))}
-			</div>
-		</>
-	);
+// 	const removeFromCart = (productToRemove) => {
+// 		setCart(cart.filter((product) => product !== productToRemove));
+// 	};
 
-	return (
-		<div>
-			<Navbar1 />
+// 	const navigateTo = (nextPage) => {
+// 		setPage(nextPage);
+// 	};
 
-			<header>
-				<button onClick={() => navigateTo(PAGE_CART)}>
-					{' '}
-					Go to Cart ({cart.length}){' '}
-				</button>
+// 	const renderCart = () => (
+// 		<>
+// 			<h1> Cart </h1>
+// 			<div>
+// 				{cart.map((product, idx) => (
+// 					<div key={idx}>
+// 						<h3> {product.name} </h3>
+// 						<h4> {product.cost} </h4>
+// 						<img src={product.image} alt={product.name} />
+// 						<button onClick={() => removeFromCart(product)}>
+// 							{' '}
+// 							RemoveFromCart{' '}
+// 						</button>
+// 					</div>
+// 				))}
+// 			</div>
+// 		</>
+// 	);
 
-				<button onClick={() => navigateTo(PAGE_PRODUCTS)}>
-					{' '}
-					Go to Products
-				</button>
-			</header>
+// 	return (
+// 		<div>
+// 			<Navbar1 />
 
-			{page === PAGE_PRODUCTS && renderProducts()}
-			{page === PAGE_CART && renderCart()}
-		</div>
-	);
-}
+// 			<header>
+// 				<button onClick={() => navigateTo(PAGE_CART)}>
+// 					{' '}
+// 					Go to Cart ({cart.length}){' '}
+// 				</button>
 
-export default CartNav;
+// 				<button onClick={() => navigateTo(PAGE_PRODUCTS)}>
+// 					{' '}
+// 					Go to Products
+// 				</button>
+// 			</header>
+
+// 			{page === PAGE_PRODUCTS && renderProducts()}
+// 			{page === PAGE_CART && renderCart()}
+// 		</div>
+// 	);
+// }
+
+// // class CartNav extends React.Component {
+// // 	render() {
+// // 		return <div></div>;
+// // 	}
+// // }
+
+// export default CartNav;
