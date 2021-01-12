@@ -49,7 +49,7 @@ function Footer() {
 
 						<p className="footerp" style={{ fontSize: 13 }}>
 							{' '}
-							Lawrencecheung97@yahoo.com{' '}
+							XXXXXXXXXXXXX@yahoo.com{' '}
 						</p>
 
 						<header

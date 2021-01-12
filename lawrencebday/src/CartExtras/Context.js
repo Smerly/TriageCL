@@ -24,6 +24,7 @@ class DataProvider extends Component {
 			},
 		],
 		cart: [],
+		total: 0,
 	};
 
 	removeCart = (id) => {
@@ -49,11 +50,23 @@ class DataProvider extends Component {
 		alert('The product has been added to the cart.');
 	};
 
+	checkOut = (id) => {
+		const { cart } = this.state;
+		cart.forEach((item, index) => {
+			if (item._id === id) {
+				cart.splice(index, 100);
+			}
+		});
+		this.setState({ cart: cart });
+	};
+
 	render() {
-		const { products, cart } = this.state;
-		const { addCart, removeCart } = this;
+		const { products, cart, total } = this.state;
+		const { addCart, removeCart, checkOut } = this;
 		return (
-			<DataContext.Provider value={{ products, addCart, cart, removeCart }}>
+			<DataContext.Provider
+				value={{ products, addCart, cart, removeCart, total, checkOut }}
+			>
 				{this.props.children}
 			</DataContext.Provider>
 		);
