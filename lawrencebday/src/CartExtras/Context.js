@@ -9,18 +9,18 @@ class DataProvider extends Component {
 		products: [
 			{
 				_id: '1',
-				title: 'shirt 01',
-				img: '',
-				size: ['S,', 'M', 'L', 'XL', 'XXL', 'XXXL'],
-				price: 19,
+				title: 'Standard Triage Tee',
+				img:
+					'https://cdn.discordapp.com/attachments/584882522211483754/798339545019449364/Shirt1.png',
+				price: 29.99,
 			},
 
 			{
 				_id: '2',
-				title: 'shirt 02',
-				img: '',
-				size: ['S,', 'M', 'L', 'XL', 'XXL', 'XXXL'],
-				price: 19,
+				title: 'Triage Inverse Tote Bag',
+				img:
+					'https://cdn.discordapp.com/attachments/584882522211483754/798339519463161866/toteinverse.png',
+				price: 19.99,
 			},
 		],
 		cart: [],
@@ -42,14 +42,13 @@ class DataProvider extends Component {
 			return item._id === id;
 		});
 
-		if (check) {
-			const data = products.filter((product) => {
-				return product._id === id;
-			});
-			this.setState({ cart: [...cart, ...data] });
-			alert('The product has been added to the cart.');
-		}
+		const data = products.filter((product) => {
+			return product._id === id;
+		});
+		this.setState({ cart: [...cart, ...data] });
+		alert('The product has been added to the cart.');
 	};
+
 	render() {
 		const { products, cart } = this.state;
 		const { addCart, removeCart } = this;

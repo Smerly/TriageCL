@@ -8,7 +8,7 @@ import mainCoffee from './Coffee/mainCoffee';
 import Footer from './Footer';
 import Location from './Location/Location';
 // import CartNav from './CartNav';
-import Cart from './CartExtras/Cart';
+import Combine from './CartExtras/Combine';
 import DataProvider from './CartExtras/Context';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 					<Route path="/merch" component={MerchMain} />
 					<Route path="/beans" component={mainCoffee} />
 					<Route path="/location" component={Location} />
-					<Route path="/cart" component={Cart} />
+					<Route path="/cart" component={Combine} />
 					<Footer />
 				</Router>
 			</div>
