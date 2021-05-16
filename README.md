@@ -1,3 +1,4 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/Smerly/TriageCL)
 # Triage Coffee Lab Website
 
 This is a mockup of making a website for a coffee shop. It is built in React and has a shopping cart feature made with a context API.
